@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
       dots[1].classList.remove('dotActive');
       dots[0].classList.add('dotActive');
       h1.style.visibility = 'visible';
-      h1.className.remove = "mobile"
+      h1.classList.remove("mobile");
       infoButton.style.display = "none";
     }
   });
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (selectedRadio.name === 'reward') {
       question1.style.display = 'none';
       h1.style.visibility = 'collapse';
-      h1.className.add = "mobile"
+      h1.classList.add("mobile");
       question2.style.display = 'block';
       questionLabel.textContent = 'Which group do you fit in?';
       dots[0].classList.remove('dotActive');
@@ -65,14 +65,14 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (selectedRadio.name === 'importance') {
       question3.style.display = 'none';
       h1.style.visibility = 'visible';
-      h1.className.remove = "mobile"
+      h1.classList.remove("mobile");
       dotContainer.style.display = 'none';
       info.style.display = "flex";
 
       h1.textContent = 'We found the best credit card for you';
       questionLabel.textContent = 'You are one step away from your new credit card';
 
-      h1.style.fontSize = "2rem"
+      h1.style.fontSize = "2rem";
       h1.classList.add("input-group-header");
       questionLabel.classList.add("input-group-description");
     }

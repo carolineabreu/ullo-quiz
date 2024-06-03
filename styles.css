@@ -282,6 +282,10 @@ footer {
   .input-group {
     gap: 1rem;
   }
+
+  .mobile {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 768px) {
