@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     if (!response.ok) {
     //       throw new Error('Ocorreu um erro ao enviar os dados do formulário.');
     //     }
-    //     // Faça algo após o envio bem-sucedido, como exibir uma mensagem de sucesso
+    //     
     //     alert('Dados do formulário enviados com sucesso!');
     //   })
     //   .catch(error => {
