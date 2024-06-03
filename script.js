@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
       questionLabel.textContent = 'Which reward do you like most in a credit card?';
       dots[1].classList.remove('dotActive');
       dots[0].classList.add('dotActive');
-      h1.style.visibility = 'visible';
       h1.classList.remove("mobile");
+      h1.classList.remove("desktop");
       infoButton.style.display = "none";
     }
   });
@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (selectedRadio.name === 'reward') {
       question1.style.display = 'none';
-      h1.style.visibility = 'collapse';
       h1.classList.add("mobile");
+      h1.classList.add("desktop");
       question2.style.display = 'block';
       questionLabel.textContent = 'Which group do you fit in?';
       dots[0].classList.remove('dotActive');
@@ -64,8 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
       dots[2].classList.add('dotActive');
     } else if (selectedRadio.name === 'importance') {
       question3.style.display = 'none';
-      h1.style.visibility = 'visible';
       h1.classList.remove("mobile");
+      h1.classList.remove("desktop");
       dotContainer.style.display = 'none';
       info.style.display = "flex";
 

@@ -245,6 +245,12 @@ input[type="radio"]:checked+.radio-label {
   font-size: 1rem;
 }
 
+.desktop {
+  visibility: collapse;
+  height: 0;
+  margin: 0;
+}
+
 footer {
   background-color: #009de3;
   color: #fff;
@@ -282,10 +288,6 @@ footer {
   .input-group {
     gap: 1rem;
   }
-
-  .mobile {
-    display: none;
-  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -308,6 +310,10 @@ footer {
   }
 
   .infoButton .button-text {
+    display: none;
+  }
+
+  .mobile {
     display: none;
   }
 }
