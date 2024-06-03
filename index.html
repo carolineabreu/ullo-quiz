@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Quiz do Ullo pra você encontrar seu cartão de crédito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="logoContainer">
+      <img class="logo" src="./logo.png" />
+    </div>
+    <div class="content">
+      <div class="info">
+        <div class="infoHeader">
+          <div class="dots">
+            <div class="dot dotActive"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <h1>Answer only 3 questions so we can help you find a credit card to boost your credit score today!</h1>
+          <label class="label" id="question-label" for="option1">Which reward do you like most in a credit card?</label>
+        </div>
+        <button id="goBackButton" class="infoButton" style="display: none;">
+          <img src="./arrow-left.svg" />
+          Go Back</button>
+        <div class="infoSubmit" style="display: none;">
+          <h1>Only a moment!</h1>
+          <p>We are finding the <strong>best option for you</strong>!</p>
+          <p>In the end we will redirect you!</p>
+        </div>
+      </div>
+      <div class="quiz">
+        <form id="quiz">
+          <div class="radio-group" id="question1">
+            <input type="radio" id="cashback" name="reward" value="cashback">
+            <label for="cashback" class="radio-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#009de3" class="bi bi-cash-stack" viewBox="0 0 16 16">
+                <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z" />
+              </svg>
+              Cash Back</label>
+            <input type="radio" id="points" name="reward" value="points">
+            <label for="points" class="radio-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#009de3" class="bi bi-star" viewBox="0 0 16 16">
+                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+              </svg>
+              Points</label>
+            <input type="radio" id="travel" name="reward" value="travel">
+            <label for="travel" class="radio-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#009de3" class="bi bi-airplane" viewBox="0 0 16 16">
+                <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599" />
+              </svg>
+              Travel Rewards</label>
+          </div>
+          <div class="radio-group" id="question2" style="display:none;">
+            <input type="radio" id="employee" name="group" value="employee">
+            <label for="employee" class="radio-label">Employee</label>
+            <input type="radio" id="self-employee" name="group" value="self-employee">
+            <label for="self-employee" class="radio-label">Self-Employee</label>
+            <input type="radio" id="student" name="group" value="student">
+            <label for="student" class="radio-label">Student</label>
+            <input type="radio" id="unemployed" name="group" value="unemployed">
+            <label for="unemployed" class="radio-label">Unemployed</label>
+            <input type="radio" id="retired" name="group" value="retired">
+            <label for="retired" class="radio-label">Retired</label>
+            <input type="radio" id="business-owner" name="group" value="business-owner">
+            <label for="business-owner" class="radio-label">Business Owner</label>
+            <input type="radio" id="prefer-not-to-say" name="group" value="prefer-not-to-say">
+            <label for="prefer-not-to-say" class="radio-label">Prefer not to say/None of above</label>
+          </div>
+          <div class="radio-group" id="question3" style="display:none;">
+            <input type="radio" id="no-annual-fee" name="importance" value="no-annual-fee">
+            <label for="no-annual-fee" class="radio-label">No Annual Fee</label>
+            <input type="radio" id="high-credit-limit" name="importance" value="high-credit-limit">
+            <label for="high-credit-limit" class="radio-label">High Credit Limit</label>
+            <input type="radio" id="easy-approval" name="importance" value="easy-approval">
+            <label for="easy-approval" class="radio-label">Easy Approval</label>
+            <input type="radio" id="balance-transfer" name="importance" value="balance-transfer">
+            <label for="balance-transfer" class="radio-label">Balance Transfer</label>
+            <input type="radio" id="no-credit-check" name="importance" value="no-credit-check">
+            <label for="no-credit-check" class="radio-label">No Credit Check</label>
+          </div>
+          <div class="input-group" id="info" style="display:none;">
+            <div class="form-group">
+              <label for="name" class="input-label">Name</label>
+              <input id="name" name="name" placeholder="My Name">
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="input-label">Email</label>
+              <input id="email" type="email" name="email" placeholder="name@example.com">
+            </div>
+            <div class="checkbox-form">
+              <input type="checkbox" id="agree" checked name="agree">
+              <label for="agree">I agree to receive personalized card recommendations by email and SMS</label>
+            </div>
+
+            <button class="submit-btn" type="submit">Apply now</button>
+          </div>
+          <!-- <button type="button" class="next-button" id="next-button">Next</button> -->
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <a href="https://ullo.com.br/pt/termos-e-condicoes-gerais-de-uso/">Termos e Condições Gerais de Uso</a>
+    <span> | </span>
+    <a href="https://ullo.com.br/politica-de-privacidade/">Política de Privacidade</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
