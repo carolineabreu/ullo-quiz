@@ -67,7 +67,7 @@ a {
   gap: 1rem;
 }
 
-.infoHeader h1 {
+#info-title {
   font-size: 1.75rem;
 }
 
@@ -235,6 +235,16 @@ input[type="radio"]:checked+.radio-label {
   align-self: center;
 }
 
+.input-group-header {
+  color: #009de3;
+}
+
+.input-group-description {
+  color: #000;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 footer {
   background-color: #009de3;
   color: #fff;
@@ -260,7 +270,7 @@ footer {
     align-items: center;
   }
 
-  .infoHeader h1,
+  #info-title,
   .label {
     text-align: center;
   }
@@ -277,6 +287,15 @@ footer {
 @media only screen and (max-width: 768px) {
   body {
     background-image: none;
+    justify-content: unset;
+  }
+
+  html {
+    font-size: 87.5%;
+  }
+
+  .container {
+    margin: 1rem;
   }
 
   .radio-group,
@@ -284,7 +303,7 @@ footer {
     width: 100%;
   }
 
-    .infoButton {
-      display: none;
-    }
+  .infoButton .button-text {
+    display: none;
+  }
 }

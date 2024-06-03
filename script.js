@@ -10,25 +10,35 @@ document.addEventListener('DOMContentLoaded', function () {
   const infoSubmit = document.querySelector(".infoSubmit");
   const content = document.querySelector('.content');
   const container = document.querySelector('.container');
-  const h1 = content.querySelector('h1');
+  const h1 = document.getElementById('info-title');
   const questionLabel = document.getElementById('question-label');
   const dotContainer = document.querySelector(".dots");
   const dots = document.querySelectorAll('.dot');
 
+  function deselectRadios(questionGroup) {
+    const radios = questionGroup.querySelectorAll('input[type="radio"]');
+    radios.forEach(radio => {
+      radio.checked = false;
+    });
+  }
+
   infoButton.addEventListener('click', function () {
     if (question3.style.display === 'block') {
+      deselectRadios(question2);
       question3.style.display = 'none';
       question2.style.display = 'block';
       questionLabel.textContent = 'Which group do you fit in?';
       dots[2].classList.remove('dotActive');
       dots[1].classList.add('dotActive');
     } else if (question2.style.display === 'block') {
+      deselectRadios(question1);
       question2.style.display = 'none';
       question1.style.display = 'block';
       questionLabel.textContent = 'Which reward do you like most in a credit card?';
-      infoButton.style.display = "none";
       dots[1].classList.remove('dotActive');
       dots[0].classList.add('dotActive');
+      h1.style.visibility = 'visible';
+      infoButton.style.display = "none";
     }
   });
 
@@ -38,10 +48,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (selectedRadio.name === 'reward') {
       question1.style.display = 'none';
+      h1.style.visibility = 'collapse';
       question2.style.display = 'block';
       questionLabel.textContent = 'Which group do you fit in?';
       dots[0].classList.remove('dotActive');
       dots[1].classList.add('dotActive');
+      infoButton.style.display = 'inline-flex';
     } else if (selectedRadio.name === 'group') {
       question2.style.display = 'none';
       question3.style.display = 'block';
@@ -50,11 +62,16 @@ document.addEventListener('DOMContentLoaded', function () {
       dots[2].classList.add('dotActive');
     } else if (selectedRadio.name === 'importance') {
       question3.style.display = 'none';
+      h1.style.visibility = 'visible';
       dotContainer.style.display = 'none';
       info.style.display = "flex";
 
       h1.textContent = 'We found the best credit card for you';
       questionLabel.textContent = 'You are one step away from your new credit card';
+
+      h1.style.fontSize = "2rem"
+      h1.classList.add("input-group-header");
+      questionLabel.classList.add("input-group-description");
     }
 
     if (question2.style.display === 'block' || question3.style.display === 'block') {
