@@ -22,7 +22,6 @@ a {
 .container {
   max-width: 1440px;
   min-height: 500px;
-  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -246,7 +245,6 @@ footer {
   left: 0;
 }
 
-/* Smartphones */
 @media only screen and (max-width: 992px) {
   .container {
     align-items: center;
@@ -285,4 +283,8 @@ footer {
   .input-group {
     width: 100%;
   }
+
+    .infoButton {
+      display: none;
+    }
 }
