@@ -8,7 +8,8 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  background-image: url("../images/background.png");
+  background-color: #D5D1D2;
+  background-image: url("./images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -276,7 +277,6 @@ footer {
 @media only screen and (max-width: 768px) {
   body {
     background-image: none;
-    background-color: #D5D1D2;
   }
 
   .radio-group,
