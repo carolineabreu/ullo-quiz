@@ -112,6 +112,9 @@ a {
   background-color: rgba(232, 232, 237, 1);
 }
 
+.infoButton i {
+  color: #000;
+}
 
 .dots {
   display: flex;
@@ -176,6 +179,12 @@ label {
 
 .bi {
   font-weight: 700;
+}
+
+.fa-solid,
+.fa-regular {
+  color: #009de3;
+  font-size: 1rem;
 }
 
 input[type="radio"] {
